@@ -1,0 +1,17 @@
+{
+  "name": "task-management-backend",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "db:migrate": "psql \"$DATABASE_URL\" -f migrations/001_init.sql",
+    "db:seed": "psql \"$DATABASE_URL\" -f seeds/seed.sql"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  }
+}
